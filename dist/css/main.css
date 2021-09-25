@@ -266,17 +266,41 @@ main {
     border-bottom: #b9fa08 5px solid;
     color: white; }
 
-.projects {
+.vlogs {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
+  .vlogs img {
+    width: 300px;
+    height: 200px;
     border: 3px #fff solid; }
-    .projects img:hover {
+    .vlogs img:hover {
       opacity: 0.5;
       border-color: #b9fa08;
       transition: all 0.5s ease-out; }
+
+.item {
+  position: relative;
+  height: 200px;
+  width: 300px; }
+
+.img-description {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 120px;
+  right: 0;
+  height: min-content;
+  width: min-content;
+  text-align: center;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-out; }
+
+.item:hover .img-description {
+  visibility: visible;
+  opacity: 1; }
 
 .boxes {
   display: flex;
@@ -320,3 +344,48 @@ main {
   background: #160216;
   color: #fff;
   height: 60px; }
+
+@media screen and (min-width: 1171px) {
+  .vlogs {
+    grid-template-columns: repeat(4, 1fr);
+    padding-left: 5px; } }
+
+@media screen and (min-width: 769px) and (max-width: 1170px) {
+  .vlogs {
+    grid-template-columns: repeat(3, 1fr);
+    padding-left: 8px; } }
+
+@media screen and (max-width: 768px) {
+  main {
+    align-items: center;
+    text-align: center; }
+    main .lg-heading {
+      line-height: 1;
+      margin-bottom: 1rem; }
+  ul.menu-nav {
+    float: none;
+    width: 100%;
+    min-height: 0; }
+    ul.menu-nav.show {
+      transform: translate3d(0, 0, 0); }
+  .menu-nav {
+    height: 75vh;
+    transform: translate3d(-100%, 0, 0);
+    font-size: 24px; }
+  .portrait {
+    background-image: url("../img/portrait_small.jpg");
+    width: 150px;
+    height: 150px; }
+  .vlogs {
+    grid-template-columns: repeat(2, 1fr);
+    padding-left: 25px; }
+  .about-info {
+    grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
+    grid-template-columns: 1fr; } }
+
+@media screen and (max-width: 500px) {
+  main#home h1 {
+    margin-top: 10vh; }
+  .vlogs {
+    grid-template-columns: 1fr;
+    padding-left: 90px; } }

@@ -136,14 +136,15 @@ main {
   }
 }
 
-// Work/Projects
-.projects {
+// Vlogs
+.vlogs {
   display: grid;
   grid-gap: 0.7rem;
   grid-template-columns: repeat(3, 1fr);
 
   img {
-    width: 100%;
+    width: 300px;
+    height: 200px;
     border: 3px #fff solid;
 
     &:hover {
@@ -152,6 +153,32 @@ main {
       @include easeOut;
     }
   }
+}
+
+.item {
+  position: relative;
+  height: 200px;
+  width: 300px;
+}
+
+.img-description {
+  position: absolute;
+  top: 70px;
+  bottom: 0;
+  left: 120px;
+  right: 0;
+  height: min-content;
+  width: min-content;
+  text-align: center;
+  color: #fff;
+  visibility: hidden;
+  opacity: 0;
+  @include easeOut;
+}
+
+.item:hover .img-description {
+  visibility: visible;
+  opacity: 1;
 }
 
 // Contact Page
@@ -211,3 +238,5 @@ main {
   color: set-text-color($primary-color);
   height: 60px;
 }
+
+@import "screen";
