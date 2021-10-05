@@ -17,6 +17,7 @@ html {
   font-weight: 400;
   color: rgb(51, 3, 3);
   line-height: 1.5;
+  position: relative;
 }
 
 // Headings
@@ -181,33 +182,6 @@ main {
   }
 }
 
-//Work page/projects
-.projects {
-  display: grid;
-  place-items: center;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(3, 1fr);
-
-  img {
-    width: 100%;
-    min-height: 200px;
-    border: 3px #fff solid;
-
-    &:hover {
-      opacity: 0.5;
-      border-color: $secondary-color;
-      @include easeOut;
-    }
-  }
-
-  .item {
-    position: relative;
-    height: 200px;
-    width: 300px;
-    z-index: -1;
-  }
-}
-
 // Contact Page
 .boxes {
   display: flex;
@@ -215,6 +189,7 @@ main {
   justify-content: space-evenly;
   align-items: center;
   margin-top: 1rem;
+  color: white;
 
   div {
     font-size: 2rem;
@@ -244,18 +219,6 @@ main {
     background: $secondary-color;
     color: set-text-color($secondary-color);
   }
-}
-
-.btn-dark {
-  @extend .btn;
-  background: darken($primary-color, 50);
-  color: #fff;
-}
-
-.btn-light {
-  @extend .btn;
-  background: lighten($primary-color, 50);
-  color: #333;
 }
 
 #main-footer {

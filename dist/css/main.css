@@ -158,9 +158,6 @@
 .nav-item:nth-child(4) {
   transition-delay: 0.4s; }
 
-.nav-item:nth-child(5) {
-  transition-delay: 0.5s; }
-
 * {
   box-sizing: border-box; }
 
@@ -173,7 +170,8 @@ html {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-weight: 400;
   color: #330303;
-  line-height: 1.5; }
+  line-height: 1.5;
+  position: relative; }
   body#bg-img,
   html#bg-img {
     background: url(../img/background.jpeg);
@@ -302,31 +300,13 @@ main {
     visibility: visible;
     opacity: 1; }
 
-.projects {
-  display: grid;
-  place-items: center;
-  grid-gap: 6rem;
-  grid-template-columns: repeat(3, 1fr); }
-  .projects img {
-    width: 100%;
-    min-height: 200px;
-    border: 3px #fff solid; }
-    .projects img:hover {
-      opacity: 0.5;
-      border-color: #b9fa08;
-      transition: all 0.5s ease-out; }
-  .projects .item {
-    position: relative;
-    height: 200px;
-    width: 300px;
-    z-index: -1; }
-
 .boxes {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
-  margin-top: 1rem; }
+  margin-top: 1rem;
+  color: white; }
   .boxes div {
     font-size: 2rem;
     border: 3px #fff solid;
@@ -340,22 +320,14 @@ main {
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-dark, .btn-light {
+.btn {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover {
     background: #b9fa08;
     color: #000; }
-
-.btn-dark {
-  background: black;
-  color: #fff; }
-
-.btn-light {
-  background: #f357f3;
-  color: #333; }
 
 #main-footer {
   text-align: center;
@@ -365,14 +337,12 @@ main {
   height: 60px; }
 
 @media screen and (min-width: 1171px) {
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: repeat(4, 1fr);
     padding-left: 5px; } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: repeat(3, 1fr);
     padding-left: 8px; } }
 
@@ -394,11 +364,9 @@ main {
     transform: translate3d(-100%, 0, 0);
     font-size: 24px; }
   .portrait {
-    background-image: url("../img/portrait_small.jpg");
     width: 150px;
     height: 150px; }
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 25px; }
   .about-info {
@@ -408,7 +376,6 @@ main {
 @media screen and (max-width: 500px) {
   main#home h1 {
     margin-top: 10vh; }
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: 1fr;
     padding-left: 90px; } }

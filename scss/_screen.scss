@@ -1,7 +1,6 @@
 // Widescreen
 @include mediaXl {
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: repeat(4, 1fr);
     padding-left: 5px;
   }
@@ -9,8 +8,7 @@
 
 // Desktops and laptops
 @include mediaLg {
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: repeat(3, 1fr);
     padding-left: 8px;
   }
@@ -44,13 +42,11 @@
   }
 
   .portrait {
-    background-image: url("../img/portrait_small.jpg");
     width: 150px;
     height: 150px;
   }
 
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: repeat(2, 1fr);
     padding-left: 25px;
   }
@@ -72,8 +68,7 @@
   main#home h1 {
     margin-top: 10vh;
   }
-  .vlogs,
-  .projects {
+  .vlogs {
     grid-template-columns: 1fr;
     padding-left: 90px;
   }
